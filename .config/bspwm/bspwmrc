@@ -2,6 +2,8 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 #nitrogen --restore &
+gsettings set org.gnome.desktop.interface gtk-theme Matcha-dark-sea &
+#gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 polybar -q Main &
 dunst &
 picom &
@@ -10,6 +12,8 @@ variety &
 numlockx &
 xfce4-clipman &
 /usr/lib/xfce-polkit/xfce-polkit &
+
+
 #whatsapp-for-linux &
 
 #bspc monitor -d "Home" "File" "WWW" "MP4" "TXT" "Term" "Torrent" "CBZ" 
@@ -39,7 +43,7 @@ bspc rule -a Lxappearance state=floating
 bspc rule -a Gcolor3 state=floating
 
 #Desktop Rules
-bspc rule -a dolphin desktop='^2'
+bspc rule -a Thunar desktop='^2'
 bspc rule -a Alacritty desktop='^6'
 bspc rule -a Vivaldi-stable desktop='^3'
 bspc rule -a Brave-Browser desktop='^3'
