@@ -94,8 +94,8 @@ ENV Variables
 filesystems=/usr/share/themes;/usr/share/icons;/usr/share/fonts;home;~/.themes;~/.icons;~/.fonts;host
 
 [Environment]
-GTK_THEME=Matcha-dark-aliz
-ICON_THEME=Qogir-manjaro-dark
+GTK_THEME=Matcha-dark-sea
+ICON_THEME=Papirus-maia
 
 3. [Bind Multimedia Keys]
 Install `pulseaudio` , `pulseaudio-alsa` & `pulsemixer` 
@@ -145,3 +145,6 @@ If Screen Capture(PipeWire) doesn't show screen, it's just black, `pipewire-medi
 
 `sudo pacman -R xdg-dekstop-portal-gnome`
 
+10. [Pamac-gtk not following gtk theme]
+
+	sudo pacman -S pamac-gtk3

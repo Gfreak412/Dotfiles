@@ -9,6 +9,7 @@ dunst &
 picom &
 nm-applet &
 variety &
+deluge &
 numlockx &
 xfce4-clipman &
 /usr/lib/xfce-polkit/xfce-polkit &
@@ -41,6 +42,7 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Lxappearance state=floating
 bspc rule -a Gcolor3 state=floating
+bspc rule -a Viewnior state=floating
 
 #Desktop Rules
 bspc rule -a Thunar desktop='^2'

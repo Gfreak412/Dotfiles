@@ -163,4 +163,4 @@ super + shift + m
 shift + alt + c 
 	bspc desktop -f ^3 && google-chrome-stable
 super + shift + g
-	geany
+	bspc desktop -f ^5 && geany
