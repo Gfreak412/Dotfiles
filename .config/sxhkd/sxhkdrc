@@ -58,9 +58,9 @@ super + ctrl + {m,x,y,z}
 #
 # focus/swap
 
-#Window Switching
-#alt + tab
-	#bspc window -d next
+# Cycle Windows in current Desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -70,9 +70,7 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -113,7 +111,7 @@ super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
-# move/resize
+# move/resize (Floating Windows)
 #
 
 # expand a window by moving one of its side outward
@@ -127,7 +125,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
+	
 #Tools
 super + shift + v
 	xfce4-popup-clipman
@@ -164,3 +162,5 @@ shift + alt + c
 	bspc desktop -f ^3 && google-chrome-stable
 super + shift + g
 	bspc desktop -f ^5 && geany
+alt + shift + l
+	cd Librum && cd build-Debug && ./appLibrum

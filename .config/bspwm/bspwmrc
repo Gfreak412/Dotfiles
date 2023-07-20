@@ -13,9 +13,8 @@ deluge &
 numlockx &
 xfce4-clipman &
 /usr/lib/xfce-polkit/xfce-polkit &
-
-
-#whatsapp-for-linux &
+whatsapp-for-linux &
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 
 #bspc monitor -d "Home" "File" "WWW" "MP4" "TXT" "Term" "Torrent" "CBZ" 
 #bspc monitor -d "" "" "󰊯" "" "" "" "" "" 
@@ -43,6 +42,9 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Lxappearance state=floating
 bspc rule -a Gcolor3 state=floating
 bspc rule -a Viewnior state=floating
+bspc rule -a Whatsapp-for-linux state=floating
+bspc rule -a discord state=floating
+bspc rule -a feh state=floating
 
 #Desktop Rules
 bspc rule -a Thunar desktop='^2'
@@ -55,3 +57,5 @@ bspc rule -a Geany desktop='^5'
 bspc rule -a obsidian desktop='^5'
 bspc rule -a vlc desktop='^4'
 bspc rule -a Google-chrome desktop='^3'
+bspc rule -a Deluge desktop=^7
+bspc rule -a Whatsapp-for-linux desktop=^8
