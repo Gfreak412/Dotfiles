@@ -11,10 +11,11 @@ fi
 
 alias install="sudo pacman -S"
 alias remove="sudo pacman -R"
-alias update="sudo pacman -Syu"
+alias update="sudo pacman -Syuu"
+alias total-update="sudo pacman -Syu && yay && flatpak update"
 alias finstall="flatpak install"
 alias fremove="flatpak uninstall"
 alias fupdate="flatpak update"
 alias rbt="reboot"
 alias shtdwn="shutdown now"
-alias librum="cd Librum && cd build-Release && ./appLibrum"
+alias librum="cd Librum && cd build-Debug && ./appLibrum"
