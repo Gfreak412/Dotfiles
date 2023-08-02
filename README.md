@@ -1,3 +1,3 @@
 # Dotfiles
-Dotfiles - BSPWM (Manjaro XFCE)
+Dotfiles - BSPWM (Manjaro XFCE)  
 Dotfiles - Hyprland (Manjaro Gnome)
