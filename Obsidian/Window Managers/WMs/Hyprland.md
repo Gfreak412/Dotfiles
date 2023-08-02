@@ -1,6 +1,9 @@
 *Very easy to configure as compared to other tiling window managers.
 great looks & despite it being new and waybar lacking a little for hyprland, it is rapidly improving.*
 
+*After having it used for a second time and with much greater knowledge & base config from last time, it lags and stutters in brave, newsflash & in many other apps.
+Not yet usable for me.*
+
 1. Install [Important]
 waybar-hyprland-git (status bar)
 dunst (notification daemon)

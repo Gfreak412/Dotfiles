@@ -143,7 +143,7 @@ If Screen Capture(PipeWire) doesn't show screen, it's just black, `pipewire-medi
 
 9. [GTK+ apps take 25s to launch]
 
-`sudo pacman -R xdg-dekstop-portal-gnome`
+`yay -R xdg-dekstop-portal-gnome`
 
 10. [Pamac-gtk not following gtk theme]
 
