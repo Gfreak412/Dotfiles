@@ -148,3 +148,8 @@ If Screen Capture(PipeWire) doesn't show screen, it's just black, `pipewire-medi
 10. [Pamac-gtk not following gtk theme]
 
 	sudo pacman -S pamac-gtk3
+
+11. [network-manager-applet asking for wifi password on reboot and relogin on KDE base]
+	open kde-system-settings > connections > wifi > wifi-security > store password for all users (unencrypted), *change and then save it again as unencrypted*
+
+	restart

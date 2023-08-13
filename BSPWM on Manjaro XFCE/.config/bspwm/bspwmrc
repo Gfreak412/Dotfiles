@@ -2,23 +2,39 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 #nitrogen --restore &
-gsettings set org.gnome.desktop.interface gtk-theme Matcha-dark-sea &
-#gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Blue-dark &
+gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic' &
+gsettings set org.gnome.desktop.interface cursor-size 20 &
+gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 11' &
+gsettings set org.gnome.desktop.interface document-font-name 'JetBrainsMono Nerd Font 11' &
+gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font Mono 10' &
+gsettings set org.gnome.desktop.interface font-antialiasing 'rgba' &
+gsettings set org.gnome.desktop.interface font-hinting 'full' &
 polybar -q Main &
 dunst &
-picom &
+pidof picom || picom &
 nm-applet &
-variety &
-deluge &
+pidof variety || variety &
+#deluge &
 numlockx &
-xfce4-clipman &
-/usr/lib/xfce-polkit/xfce-polkit &
-whatsapp-for-linux &
+pidof xfce4-clipman || xfce4-clipman &
+kdeconnect-indicator &
+/usr/lib/polkit-kde-authentication-agent-1 &
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/lib/xfce-polkit/xfce-polkit &
+pidof whatsapp-for-linux || whatsapp-for-linux &
+export GTK_THEME=Catppuccin-Mocha-Standard-Blue-dark &
+export ICON_THEME=Papirus-Dark &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
+#export QT_QPA_PLATFORMTHEME=qt5ct &
+mpd &
+ncmpcpp -q &
+
 
 #bspc monitor -d "Home" "File" "WWW" "MP4" "TXT" "Term" "Torrent" "CBZ" 
 #bspc monitor -d "" "" "󰊯" "" "" "" "" "" 
-bspc monitor -d "󰋜" "" "" "" "󱃖" "" "" "󰂺"
+#bspc monitor -d "󰋜" "" "" "" "󱃖" "" "" "󰂺"
+bspc monitor -d "󰋜" "" "" "󰕼" "󱃖" "" "" "󰂺"
 
 bspc config border_width         2
 bspc config window_gap          6
@@ -45,10 +61,11 @@ bspc rule -a Viewnior state=floating
 bspc rule -a Whatsapp-for-linux state=floating
 bspc rule -a discord state=floating
 bspc rule -a feh state=floating
+bspc rule -a Nm-connection-editor state=floating
 
 #Desktop Rules
 bspc rule -a Thunar desktop='^2'
-bspc rule -a Alacritty desktop='^6'
+#bspc rule -a Alacritty desktop='^6'
 bspc rule -a Vivaldi-stable desktop='^3'
 bspc rule -a Brave-Browser desktop='^3'
 bspc rule -a firefox desktop='^1'
@@ -59,3 +76,4 @@ bspc rule -a vlc desktop='^4'
 bspc rule -a Google-chrome desktop='^3'
 bspc rule -a Deluge desktop=^7
 bspc rule -a Whatsapp-for-linux desktop=^8
+bspc rule -a YACReaderLibrary desktop=^8

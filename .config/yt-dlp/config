@@ -1,0 +1,11 @@
+#Extract audio
+-x
+
+#Embed Thumbnail
+--embed-thumbnail
+
+#Audio format
+--audio-format mp3
+
+#Save Location
+-o ~/Music/Songs/%(title)s.%(ext)s

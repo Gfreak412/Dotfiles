@@ -4,7 +4,8 @@
 
 # terminal emulator
 super + Return
-	bspc desktop -f ^6 && alacritty
+	bspc rule -a \* -o state=floating && alacritty	
+	#bspc rule -a \* -o state={tiled,floating} && alacritty
 
 # program launcher
 super + shift + Return
@@ -12,7 +13,7 @@ super + shift + Return
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && dunstify -u low -i input-keyboard 'SXHKD' reloaded
 
 #Polybar restart
 super + shift + alt + x
@@ -131,12 +132,14 @@ super + shift + v
 	xfce4-popup-clipman
 	
 #Volume Control
-XF86AudioLowerVolume
-	amixer set Master 5%-
-XF86AudioRaiseVolume
-	amixer set Master 5%+
-XF86AudioMute
-        amixer set Master toggle	
+XF86Audio{LowerVolume,RaiseVolume,Mute}
+	amixer set Master {5%- && ~/.local/bin/volnotification,5%+ && ~/.local/bin/volnotification,toggle && ~/.local/bin/volnotification}
+#XF86AudioLowerVolume
+	#amixer set Master 5%- && ~/.local/bin/volnotification
+#XF86AudioRaiseVolume
+	#amixer set Master 5%+ && ~/.local/bin/volnotification
+#XF86AudioMute
+    #amixer set Master toggle && ~/.local/bin/volnotification
 	
 #System Power Shortcuts
 super + shift + Delete
@@ -144,18 +147,43 @@ super + shift + Delete
 super + shift + x
 	betterlockscreen -l dim
 
-#Pause Notification
+#Variety
+super + shift + F12
+	variety -n
+super + shift + F11
+	variety -p
+
+#Screenshot
+Print
+	flameshot screen
+
+shift + Print
+    flameshot gui
+
+#Notification
 super + a
 	dunstctl set-paused	toggle
+super + shift + Insert
+		dunstctl history-pop
+	
+#Grab WM_Class	
+super + alt + c
+  dunstify -i gtk-dialog-info CLASS "$(xprop | grep 'CLASS')"	
+	
+#Color Picker
+super + shift + p
+		gcolor3
 #Apps List
 super + e 
-	bspc desktop -f ^2 && thunar
+	bspc desktop -f ^2 && dolphin
 super + shift + b
 	bspc desktop -f ^3 && brave
 shift + alt + v
 	bspc desktop -f ^3 && vivaldi-stable
 super + shift + w
 	bspc desktop -f ^1 && firefox
+super + shift + e
+	bspc desktop -f ^3 && com.microsoft.Edge
 super + shift + m
 	bspc desktop -f ^1 && thunderbird
 shift + alt + c 
