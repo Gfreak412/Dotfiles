@@ -1,0 +1,32 @@
+gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Blue-dark &
+gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic' &
+gsettings set org.gnome.desktop.interface cursor-size 20 &
+gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 11' &
+gsettings set org.gnome.desktop.interface document-font-name 'JetBrainsMono Nerd Font 11' &
+gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font Mono 10' &
+gsettings set org.gnome.desktop.interface font-antialiasing 'rgba' &
+gsettings set org.gnome.desktop.interface font-hinting 'full' &
+polybar -q Main &
+plank &
+dunst &
+pidof picom || picom &
+nm-applet &
+pidof variety || variety &
+qbittorrent &
+#deluge &
+numlockx &
+opensnap -d &
+alttab &
+skippy-xd --start-daemon &
+pidof xfce4-clipman || xfce4-clipman &
+kdeconnect-indicator &
+/usr/lib/polkit-kde-authentication-agent-1 &
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/lib/xfce-polkit/xfce-polkit &
+pidof whatsapp-for-linux || whatsapp-for-linux &
+export GTK_THEME=Catppuccin-Mocha-Standard-Blue-dark &
+export ICON_THEME=Papirus-Dark &
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
+#export QT_QPA_PLATFORMTHEME=qt5ct &
+mpd &
+ncmpcpp -q &
