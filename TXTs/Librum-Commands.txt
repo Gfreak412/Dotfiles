@@ -1,0 +1,33 @@
+git clone -b core_switch https://github.com/Librum-Reader/Librum.git --recursive
+git clone -b main https://github.com/Librum-Reader/Librum.git --recursive
+cd Librum
+mkdir build-Debug
+cd build-Debug
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=Off -DCMAKE_PREFIX_PATH=/home/kanishk/Qt/6.5.1/gcc_64 ..
+cmake --build .
+
+
+
+
+
+
+
+
+
+
+
+
+
+git clone https://github.com/Etovex/Librum.git --recursive
+cd Librum
+mkdir build-Debug
+cd libs/mupdf
+git submodule update --init
+git submodule update
+git submodule update --init
+cd ..
+cd ..
+cd build-Debug
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=Off -DCMAKE_PREFIX_PATH=/home/kanishk/Qt/6.5.1/gcc_64 ..
+cmake --build .
+./appLibrum

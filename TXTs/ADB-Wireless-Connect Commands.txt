@@ -1,0 +1,12 @@
+Connect through USB Cable
+Turn on USB Debugging
+run `adb` in terminal
+authorize the connection in mobile device
+now check the connection by running `adb devices`
+
+Run - `adb tcpip 5555`
+find the IP adress in connected wifi properties in android wifi settings page
+then to connect wirelessly run - `adb connect ip_adress`
+You can take out the USB and use the port for anything else like controller, etc.
+
+#for connecting to scrcpy run - `scrcpy -e`

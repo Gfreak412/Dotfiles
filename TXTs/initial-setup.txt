@@ -1,0 +1,17 @@
+[Basic Setup]
+
+1. sudo pacman -Syuu
+2. sudo pacman -S base-devel
+3. sudo pacman -S alacritty appimagelauncher bibata-cursor-theme brave-browser bitwarden cmatrix neofetch discord thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin firefox foliate geany gnome-disk-utility gcolor3 htop viewnior kdeconnect kvantum lollypop pamac-gtk3 nautilus dolphin neovim vim newsflash obs-studio qbittorrent shotcut telegram-desktop thunderbird torbrowser-launcher vlc vivaldi 
+
+4. yay -S whatsapp-for-linux google-chrome tachidesk yacreader pipes.sh sddm-theme-corners-git 
+
+
+[For BSPWM]
+
+sudo pacman -S bspwm sxhkd variety xfce4-clipman-plugin rofi polybar mpd ncmpcpp dunst picom network-manager-applet flameshot lxappearance-gtk3 numlockx pavucontrol
+
+yay -S betterlockscreen eww-x11 skippy-xd-git alttab
+
+
+
